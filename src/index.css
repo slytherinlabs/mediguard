@@ -1,16 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Geist:wght@100;300;400;500;600;700;800;900&family=Geist+Mono:wght@100;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: "Playfair Display", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
+}
+
+:root {
+  --font-geist-sans: "Geist";
+  --font-geist-mono: "Geist Mono";
+  --font-playfair: "Playfair Display";
+  --font-dm-sans: "DM Sans";
+}
+
+@layer base {
+  body {
+    font-family: var(--font-dm-sans), var(--font-geist-sans), ui-sans-serif,
+      system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-geist-sans {
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .font-geist-mono {
+    font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .font-playfair {
+    font-family: var(--font-playfair), ui-serif, Georgia, Cambria,
+      "Times New Roman", Times, serif;
+  }
+
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+}
 
 @layer components {
   .card {
     @apply rounded-2xl bg-zinc-900/50 p-6 border border-zinc-800 backdrop-blur-sm;
   }
   .pill-green {
-    @apply inline-flex w-fit items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-emerald-400;
+    @apply inline-flex w-fit items-center rounded-full border border-zinc-600/30 bg-zinc-600/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-zinc-300;
   }
   .pill-amber {
-    @apply inline-flex w-fit items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-amber-400;
+    @apply inline-flex w-fit items-center rounded-full border border-zinc-500/30 bg-zinc-500/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-zinc-400;
   }
   .pill-red {
-    @apply inline-flex w-fit items-center rounded-full border border-rose-500/30 bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-rose-400;
+    @apply inline-flex w-fit items-center rounded-full border border-zinc-400/30 bg-zinc-400/10 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-zinc-500;
   }
 }
