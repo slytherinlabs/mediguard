@@ -15,3 +15,12 @@ export const TRUST_POINTS = [
 		desc: "One workspace for onboarding, anomaly monitoring, and supply-chain oversight.",
 	},
 ];
+
+export const WAITLIST_REASONS = [
+	"Manufacturer onboarding",
+	"Distributor onboarding",
+	"Pharmacy onboarding",
+	"Regulatory and quality access",
+	"Partnership and pilot request",
+	"Other",
+];

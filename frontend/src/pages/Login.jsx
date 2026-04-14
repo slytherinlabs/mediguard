@@ -244,10 +244,10 @@ export default function Login() {
 					<p className="mt-5 text-center text-[12px] text-zinc-600">
 						Don&apos;t have an account?{" "}
 						<Link
-							to="/contact"
+							to="/waitlist"
 							className="text-zinc-300 transition hover:text-zinc-100 underline underline-offset-2"
 						>
-							Request access
+							Join waitlist
 						</Link>
 					</p>
 				</div>

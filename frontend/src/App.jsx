@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Waitlist from "./pages/Waitlist";
 import "./App.css";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        {/* Catch-all: redirect unknown paths to home */}
+        <Route path="/waitlist" element={<Waitlist />} />
         <Route
           path="*"
           element={

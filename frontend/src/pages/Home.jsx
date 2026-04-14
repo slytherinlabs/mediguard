@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaqAccordion } from "../components/FaqAccordion";
+import FaqAccordion from "../components/FaqAccordian";
 import {
 	ACTOR_COLOR,
 	BENEFITS,
@@ -98,7 +98,7 @@ export default function Home() {
 					</div>
 
 					<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-						{PROBLEMS.map((p, i) => (
+						{PROBLEMS.map((p) => (
 							<div
 								key={p.stat}
 								className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 hover:border-zinc-700 transition-colors"

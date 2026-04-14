@@ -109,7 +109,7 @@ function AccordionRow({ faq, isOpen, onToggle, isLast }) {
 }
 
 /* ── Main export ────────────────────────────────────────────── */
-export function FaqAccordion({ items }) {
+export default function FaqAccordion({ items }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (

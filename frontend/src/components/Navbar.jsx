@@ -73,6 +73,13 @@ export default function Navbar() {
         {/* ── Right: Login button ── */}
         <div className="flex items-center gap-3">
           <Link
+            to="/waitlist"
+            id="nav-waitlist-btn"
+            className="hidden md:inline-flex items-center gap-2 rounded-xl border border-zinc-700/80 bg-zinc-900/40 px-4 py-1.5 text-sm font-semibold text-zinc-300 backdrop-blur-sm transition-all duration-200 hover:border-zinc-500 hover:bg-zinc-900 hover:text-zinc-100 active:scale-95"
+          >
+            Waitlist
+          </Link>
+          <Link
             to="/login"
             id="nav-login-btn"
             className="hidden md:inline-flex items-center gap-2 rounded-xl border border-zinc-700/80 bg-zinc-900/70 px-4 py-1.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm transition-all duration-200 hover:border-zinc-500 hover:bg-zinc-900 hover:text-zinc-100 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
@@ -130,6 +137,15 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li className="mt-2 px-1">
+            <Link
+              to="/waitlist"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-2 rounded-xl border border-zinc-700/80 bg-zinc-900/50 px-4 py-2.5 text-sm font-semibold text-zinc-300 transition-all hover:border-zinc-500 hover:text-zinc-100"
+            >
+              Join Waitlist
+            </Link>
+          </li>
           <li className="mt-2 px-1">
             <Link
               to="/login"
